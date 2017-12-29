@@ -77,6 +77,7 @@ public class SuggestActivity extends AppCompatActivity {
     // okhttp 意见反馈
     public void Advice(String URL) {
         try{
+            URL = new String(URL.getBytes("gbk"),"utf-8");
             final Request request = new Request.Builder()
                     .url(URL)
                     .get()
